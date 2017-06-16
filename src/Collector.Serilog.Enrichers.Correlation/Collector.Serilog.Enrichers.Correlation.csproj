@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <Authors>Heimdal</Authors>
+    <Company>Collector Bank AB</Company>
+    <PackageProjectUrl>https://github.com/collector-bank/serilog-enrichers-correlation</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/collector-bank/serilog-enrichers-correlation</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Description>A package to enrich serilog log events with information from Collector.Common.Correlation.CorrelationState</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Collector.Common.Correlation" Version="1.0.2" />
+    <PackageReference Include="Serilog" Version="2.3.0" />
+  </ItemGroup>
+
+</Project>
