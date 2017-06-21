@@ -14,11 +14,11 @@
             var currentCorrelationId = CorrelationState.GetCurrentCorrelationId();
             if (currentCorrelationId.HasValue)
             {
-                logEvent.AddPropertyIfAbsent(propertyFactory.CreateProperty("CorrelationId", currentCorrelationId.Value));
-
                 var correlationDictionary = CorrelationState.GetCorrelationValues().ToDictionary(c => c.Key, c => c.Value);
-                if (correlationDictionary.Any())
-                    logEvent.AddPropertyIfAbsent(propertyFactory.CreateProperty("Correlation", correlationDictionary, destructureObjects: true));
+
+                correlationDictionary["CorrelationId"] = currentCorrelationId.Value;
+
+                logEvent.AddPropertyIfAbsent(propertyFactory.CreateProperty("Correlation", correlationDictionary, destructureObjects: true));
             }
         }
     }

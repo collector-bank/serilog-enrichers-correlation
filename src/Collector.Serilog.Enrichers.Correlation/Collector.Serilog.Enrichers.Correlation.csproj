@@ -9,7 +9,7 @@
     <RepositoryType>git</RepositoryType>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Description>A package to enrich serilog log events with information from Collector.Common.Correlation.CorrelationState</Description>
-    <Version>1.0.1</Version>
+    <Version>2.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
