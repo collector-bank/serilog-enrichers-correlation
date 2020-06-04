@@ -19,6 +19,7 @@
                 correlationDictionary["CorrelationId"] = currentCorrelationId.Value;
 
                 logEvent.AddPropertyIfAbsent(propertyFactory.CreateProperty("Correlation", correlationDictionary, destructureObjects: true));
+                logEvent.AddPropertyIfAbsent(propertyFactory.CreateProperty("CorrelationId", currentCorrelationId.Value));
             }
         }
     }
